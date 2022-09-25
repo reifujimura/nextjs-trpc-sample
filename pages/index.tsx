@@ -15,30 +15,24 @@ export default function IndexPage() {
   const [name, setName] = useState("");
   return (
     <div>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      ></input>
-      <button
-        onClick={() => {
-          add.mutate({ name });
-          setName("");
-        }}
-      >
-        Add
-      </button>
-      <div
-        style={{
-          width: "100vw",
-          borderBottom: "2px solid black",
-        }}
-      />
-      <p>
-        {hello.data.map((user) => (
-          <div key={user.id}>{JSON.stringify(user)}</div>
-        ))}
-      </p>
+      <div className="col">
+        <input
+          className="text-field"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+        <button className="btn" onClick={() => add.mutate({ name })}>
+          Add
+        </button>
+      </div>
+      <div className="divider" />
+      <div className="content">
+        <p>
+          {hello.data.map((user) => (
+            <div key={user.id}>{JSON.stringify(user)}</div>
+          ))}
+        </p>
     </div>
   );
 }

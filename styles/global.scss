@@ -1,0 +1,51 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.text-field {
+  border: 0px;
+  box-shadow: 0 0 1px inset gray;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  &:focus {
+    outline-color: rgba(lightgray, 0.5);
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  transition: all 0.2s ease-out;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 0.25rem gray;
+  }
+  &:active {
+    background-color: gray;
+    box-shadow: 0 0 0.3rem gray;
+  }
+}
+
+.divider {
+  margin: 0.25rem;
+  padding: 0rem 1rem;
+  background-color: lightgray;
+  height: 1px;
+  border-radius: 1px;
+  box-shadow: 0 0 0.1rem rgba(lightgray, 0.5);
+}
+
+.content {
+  padding: 1rem;
+}
